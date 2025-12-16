@@ -4,6 +4,12 @@ const UseMemo = () => {
   //     useMemo is used to remember the result of a calculation so React doesn’t recalculate it again and again.
   // In short:
   // 👉 Performance optimization hook
+  //   Is this value calculated from state/props AND slow to compute?
+
+  // YES → useMemo
+
+  // NO → don’t use it
+  //syntax-const variable=useMemo(()=>{},[])
   const [count, setCount] = useState(0);
   const [text, setText] = useState([]);
 
