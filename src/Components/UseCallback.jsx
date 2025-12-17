@@ -46,3 +46,52 @@ const UseCallback = () => {
 };
 
 export default UseCallback;
+
+//  Two hooks in same example
+// import React, { useState, useMemo, useCallback } from "react";
+// import ProductCard from "./ProductCard";
+
+// const App = () => {
+//   const [search, setSearch] = useState("");
+//   const [cart, setCart] = useState([]);
+
+//   const products = [
+//     { id: 1, name: "Laptop" },
+//     { id: 2, name: "Mouse" },
+//     { id: 3, name: "Phone" },
+//   ];
+
+//   // useMemo → VALUE
+//   const filteredProducts = useMemo(() => {
+//     return products.filter((p) =>
+//       p.name.toLowerCase().includes(search.toLowerCase())
+//     );
+//   }, [products, search]);
+
+//   // useCallback → FUNCTION
+//   const addToCart = useCallback((id) => {
+//     setCart((prev) => [...prev, id]);
+//   }, []);
+
+//   return (
+//     <>
+//       <input
+//         value={search}
+//         onChange={(e) => setSearch(e.target.value)}
+//         placeholder="Search"
+//       />
+
+//       {filteredProducts.map((p) => (
+//         <ProductCard
+//           key={p.id}
+//           product={p}
+//           onAdd={addToCart}
+//         />
+//       ))}
+
+//       <p>Cart count: {cart.length}</p>
+//     </>
+//   );
+// };
+
+// export default App;
