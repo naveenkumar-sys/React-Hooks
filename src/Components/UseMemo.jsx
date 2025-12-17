@@ -5,6 +5,7 @@ const UseMemo = () => {
   // In short:
   // 👉 Performance optimization hook
   //   Is this value calculated from state/props AND slow to compute?
+  // It will memoize(remember the value and useCallback will memoize the function note:both are performance optimization hook,both are control unesscesary renders)
 
   // YES → useMemo
 
