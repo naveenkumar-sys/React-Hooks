@@ -1,5 +1,5 @@
 //Here we are only define ReducerAction as function not a component so we directly export it without receiving as props
-export const ReducerAction = (value, action) => {
+ const ReducerAction = (value, action) => {
   // reducer logic
   //   console.log(value);
   //   console.log(action);
@@ -16,3 +16,5 @@ export const ReducerAction = (value, action) => {
     }
   }
 };
+
+export default ReducerAction;
